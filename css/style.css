@@ -1,0 +1,432 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.anta-regular {
+  font-family: "Anta", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+header {
+  width: 100%;
+  background-color: #000;
+  text-align: center;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: black;
+}
+
+nav {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background-color: black;
+}
+
+/* ===== LOGO ===== */
+.logo {
+  width: 150px;
+  margin: 1.5rem 0 1.5rem 0;
+}
+
+/* ===== CART ===== */
+.cartIndex {
+  color: slategrey;
+  position: absolute;
+  top: 30px;
+  right: 30px;
+}
+
+/* ===== CUSTOM ALERT MODAL ===== */
+/* The Modal (background overlay) */
+.popup-modal {
+  display: none; /* Hidden by default */
+  position: fixed;
+  z-index: 1000; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Modal content (the popup window) */
+.popup-content {
+  background-color: #fff; /* Popup background color */
+  padding: 20px;
+  border-radius: 10px;
+  width: 300px;
+  max-width: 80%; /* Make it responsive */
+  margin: auto;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional shadow for effect */
+}
+
+/* Message inside the popup */
+.popup-content p {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Close button (hidden by default) */
+#popup-close {
+  display: none; /* Hide by default */
+  background-color: #007bff; /* Button background color */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#popup-close:hover {
+  background-color: #0056b3;
+}
+
+/* Show the close button and modal when it has the 'show' class */
+.popup-modal.show {
+  display: flex; /* Use flexbox to center the modal */
+}
+
+.popup-modal.show #popup-close {
+  display: inline-block; /* Show the close button */
+}
+/* ===== CUSTOM ALERT MODAL - END ===== */
+
+/* ===== CARDS ===== */
+
+.card {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  gap: 2vw;
+}
+
+/* ===== .animated_card ===== */
+.animated_card2 {
+  display: grid;
+  place-items: center;
+  position: relative;
+  height: 100px;
+  width: 150px;
+  background: #222;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+/* ===== Fa icon settings ===== */
+span {
+  color: rgba(254, 254, 254, 0.1);
+  font-size: 2.2em;
+  z-index: 10;
+  margin-top: 8px;
+  margin-top: 6px;
+}
+
+/* ===== Border animation ===== */
+.animated_card2 {
+  overflow: hidden;
+  margin: 10px;
+}
+
+.animated_card2::before {
+  position: absolute;
+  content: "";
+  width: 50%;
+  height: 180%;
+  background: red;
+  transform: rotate(45deg);
+}
+
+/* ===== Card scaling effect ===== */
+.animated_card2 {
+  transition: all 0.3s ease-in-out;
+}
+
+.animated_card2:hover {
+  transform: scale(1.15);
+}
+/* ===== Card scaling effect END ===== */
+
+.animated_card2:hover::before {
+  animation: animate2 0.5s linear infinite;
+}
+
+@keyframes animate2 {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+    filter: hue-rotate(-360deg) saturate(1000%);
+  }
+}
+
+.animated_card2::after {
+  position: absolute;
+  content: "";
+  inset: 1px;
+  background: #111;
+  border-radius: 8px;
+}
+
+li {
+  color: none;
+}
+
+a:link {
+  text-decoration: none;
+  color: slategray;
+}
+
+a:visited {
+  color: slategray;
+  text-decoration: none;
+}
+
+a:hover {
+  color: red;
+  text-decoration: none;
+}
+
+a:active {
+  color: green;
+  text-decoration: none;
+}
+/* ===== CARDS END ===== */
+
+h1 {
+  font-family: "Anta";
+  font-size: 4rem;
+  text-transform: capitalize;
+}
+
+.title h2 {
+  font-family: "Anta";
+  font-size: 3rem;
+  font-weight: 400;
+  color: #ccc;
+
+  /* ===== Font effect - WEB DEVELOPMENT ===== */
+  position: relative;
+  top: 30px;
+  left: 230px;
+  transform: translate(-50%, -50%);
+  font-size: 50px;
+  letter-spacing: 0.1em;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: white;
+  text-shadow: 4px 4px #ccc, 9px 9px #000000;
+}
+
+h3 {
+  font-family: "Anta";
+  color: slategray;
+  text-transform: capitalize;
+  z-index: 11;
+  margin-bottom: 8px;
+}
+
+p {
+  font-family: sans-serif;
+  font-weight: 100;
+  color: #ccc;
+  text-align: left;
+}
+
+li {
+  color: #ccc;
+}
+
+.title {
+  text-align: center;
+  color: #ccc;
+  margin: 2rem 2rem;
+  max-width: 60rem;
+  height: auto;
+}
+
+.pageOne {
+  font-family: "Anta";
+  color: #333;
+  opacity: 0.6;
+  font-size: 10rem;
+  position: fixed;
+  top: 4.5rem;
+  left: 1.5rem;
+  z-index: -1;
+  max-height: 1rem;
+}
+
+.heroBg {
+  width: 98%;
+  background-image: url(../img/HeroBgOne.jpeg);
+  background-position: center;
+  margin: 20px;
+}
+
+.hero {
+  margin: 2rem 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.website {
+  margin: 2rem 1rem;
+  width: 20rem;
+}
+
+.start {
+  margin: 2rem;
+  text-align: center;
+  max-width: 30rem;
+}
+
+.list {
+  max-width: 90%;
+  margin-top: 30px;
+  /* list-style: circle; */
+  font-family: "Anta";
+  font-size: 1.2rem;
+  line-height: 2rem;
+  text-align: left;
+  color: #ccc;
+}
+
+.listing {
+  background-color: white;
+  margin-top: 10px;
+  padding: 20px 0 20px 0;
+  border-radius: 10px;
+}
+
+.listing p {
+  /* font-family: "Anta"; */
+  color: #333;
+  font-size: 1rem;
+  line-height: 1.4rem;
+  margin-left: 30px;
+  font-weight: 500;
+}
+
+.listing p:last-child {
+  font-family: "Anta";
+  font-size: 1.5rem;
+  margin-top: 20px;
+}
+
+/* ===== MEDIA Screen ===== */
+
+@media screen and (min-width: 568px) {
+  .list {
+    margin: auto;
+  }
+}
+
+@media screen and (max-width: 567px) {
+  .start {
+    margin: 2rem;
+  }
+
+  h1 {
+    margin-left: 2rem;
+    margin-right: 2rem;
+    font-size: 3.5rem;
+  }
+
+  * {
+    overflow-x: hidden;
+  }
+  span {
+    overflow-y: hidden;
+  }
+
+  /* li {
+    color: #ccc;
+  } */
+
+  .title {
+    margin: 4rem 1rem;
+    max-width: 25rem;
+    height: auto;
+  }
+
+  .pageOne {
+    writing-mode: vertical-lr;
+    /* transform: rotate(180deg);
+    text-align: left; */
+    font-family: "Anta";
+    color: #333;
+    /* opacity: 0.6; */
+    font-size: 6rem;
+    position: fixed;
+    top: 10rem;
+    right: -1.3rem;
+    z-index: -1;
+    max-height: 26rem;
+  }
+
+  .list {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    text-align: center;
+    /* list-style: circle; */
+    font-family: "Anta";
+    font-size: 1rem;
+    line-height: 2rem;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .start {
+    margin: 0rem;
+  }
+
+  .animated_card2 {
+    margin: 3px;
+  }
+
+  .website {
+    margin-top: 0;
+  }
+
+  .title {
+    margin: 30px 0px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  .list {
+    margin: 1rem 1rem 1rem 3rem;
+  }
+}
+
+/* ========== Active link in NAV ========== */
+nav a.active h3 {
+  /* background-color: #007bff; */
+  color: red;
+  font-size: 1em;
+  font-weight: bold;
+  border-radius: 5px;
+}
+/* ========== Active link in NAV - END ========== */
