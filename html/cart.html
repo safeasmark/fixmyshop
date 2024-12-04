@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/cart.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>Shopping Cart with Slide-out</title>
+  </head>
+  <body>
+    <header>
+      <a href="../index.html" alt="Home">
+        <img class="logo" src="../img/LogoNEW.png" alt="Logo" />
+      </a>
+    </header>
+
+    <nav>
+      <section class="card">
+        <a href="../index.html">
+          <div class="animated_card2">
+            <span class="fa fa-address-card-o"></span>
+            <h3>Home</h3>
+          </div>
+        </a>
+
+        <a href="../html/service.html">
+          <div class="animated_card2">
+            <span class="fa fa-code"></span>
+            <h3>What we do</h3>
+          </div>
+        </a>
+
+        <a href="../html/about.html">
+          <div class="animated_card2">
+            <span class="fa fa-users"></span>
+            <h3>About Us</h3>
+          </div>
+        </a>
+        <a href="../html/contact.html">
+          <div class="animated_card2">
+            <span class="fa-regular fa-paper-plane"></span>
+            <h3>Contact Us</h3>
+          </div>
+        </a>
+      </section>
+    </nav>
+
+    <div class="container">
+      <!-- Product List -->
+      <div class="product-list">
+        <h2>Products</h2>
+        <div
+          class="product"
+          data-id="1"
+          data-name="Product 1"
+          data-price="1500"
+        >
+          <img src="https://via.placeholder.com/100" alt="Product 1" />
+          <h3>Product 1</h3>
+          <p>$1.500</p>
+          <input type="number" id="quantity-1" value="1" min="1" />
+          <button onclick="addToCart(1, 'Product 1', 1500)">Add to Cart</button>
+        </div>
+        <div class="product" data-id="2" data-name="Product 2" data-price="30">
+          <img src="https://via.placeholder.com/100" alt="Product 2" />
+          <h3>Product 2</h3>
+          <p>$30</p>
+          <input type="number" id="quantity-2" value="1" min="1" />
+          <button onclick="addToCart(2, 'Product 2', 30)">Add to Cart</button>
+        </div>
+        <div class="product" data-id="3" data-name="Product 3" data-price="40">
+          <img src="https://via.placeholder.com/100" alt="Product 3" />
+          <h3>Product 3</h3>
+          <p>$40</p>
+          <input type="number" id="quantity-3" value="1" min="1" />
+          <button onclick="addToCart(3, 'Product 3', 40)">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Cart Section -->
+    <div id="cart" class="cart">
+      <span class="close-cart" onclick="toggleCart()">×</span>
+      <h2>Your Cart</h2>
+      <div id="cart-items"></div>
+      <div class="total" id="cart-total">Total: $0</div>
+      <button onclick="checkout()">Checkout</button>
+    </div>
+
+    <!-- View Cart Button -->
+    <button class="view-cart" onclick="toggleCart()" id="add-to-cart-button">
+      View Cart
+    </button>
+
+    <!-- Empty Cart Modal -->
+    <div id="empty-cart-modal" class="empty-cart-modal">
+      <div class="modal-content">
+        <p>Your cart is empty!</p>
+        <button onclick="closeModal('empty-cart-modal')">Close</button>
+      </div>
+    </div>
+
+    <!-- Proceed to Checkout Modal -->
+
+    <div id="proceed-checkout-modal" class="proceed-checkout-modal">
+      <div class="modal-content">
+        <p>Proceeding to checkout!</p>
+
+        <button onclick="closeModal('proceed-checkout-modal')">Close</button>
+      </div>
+    </div>
+  </body>
+  <script src="../js/cart.js"></script>
+  <script
+    src="https://kit.fontawesome.com/6dbf9872e5.js"
+    crossorigin="anonymous"
+  ></script>
+  <script>
+    // JavaScript to highlight the active link
+    document.addEventListener("DOMContentLoaded", function () {
+      const links = document.querySelectorAll("nav a"); // Select all nav links
+      links.forEach((link) => {
+        if (link.href === window.location.href) {
+          link.classList.add("active"); // Add 'active' class to the current page link
+        }
+      });
+    });
+  </script>
+  <script
+    src="https://kit.fontawesome.com/6dbf9872e5.js"
+    crossorigin="anonymous"
+  ></script>
+</html>

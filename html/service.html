@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>What we do</title>
+  </head>
+  <body>
+    <span class="cartIndex">
+      <a href="../html/cart.html">
+        <i
+          class="fa-solid fa-cart-shopping fa-fade"
+          style="--fa-animation-duration: 5s; --fa-fade-opacity: 0.6"
+          alt="Shopping cart"
+        ></i>
+      </a>
+    </span>
+    <header>
+      <a href="../index.html" alt="Home">
+        <img class="logo" src="../img/LogoNEW.png" alt="Logo" />
+      </a>
+    </header>
+
+    <nav>
+      <section class="card">
+        <a href="../index.html">
+          <div class="animated_card2">
+            <span class="fa fa-address-card-o"></span>
+            <h3>Home</h3>
+          </div>
+        </a>
+
+        <a href="../html/service.html">
+          <div class="animated_card2">
+            <span class="fa fa-code"></span>
+            <h3>What we do</h3>
+          </div>
+        </a>
+
+        <a href="../html/about.html">
+          <div class="animated_card2">
+            <span class="fa fa-users"></span>
+            <h3>About Us</h3>
+          </div>
+        </a>
+        <a href="../html/contact.html">
+          <div class="animated_card2">
+            <span class="fa-regular fa-paper-plane"></span>
+            <h3>Contact Us</h3>
+          </div>
+        </a>
+      </section>
+    </nav>
+
+    <br /><br />
+    <p style="color: white">What we do</p>
+  </body>
+  <script>
+    // JavaScript to highlight the active link
+    document.addEventListener("DOMContentLoaded", function () {
+      const links = document.querySelectorAll("nav a"); // Select all nav links
+      links.forEach((link) => {
+        if (link.href === window.location.href) {
+          link.classList.add("active"); // Add 'active' class to the current page link
+        }
+      });
+    });
+  </script>
+  <script
+    src="https://kit.fontawesome.com/6dbf9872e5.js"
+    crossorigin="anonymous"
+  ></script>
+</html>
