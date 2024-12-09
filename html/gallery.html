@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Gallery</title>
+    <link rel="stylesheet" href="../css/gallery.css" />
+  </head>
+  <body></body>
+  <script src="../js/gallery.js"></script>
+</html>
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Image Gallery Array</title>
+  </head>
+  <body>
+    <h1>Image Gallery</h1>
+    <h2>Click on the arrows</h2>
+
+    <div class="gallery">
+      <div class="arrow-left">
+        <img
+          src="../img/chevron-left.png"
+          onclick="change(-1)"
+          value="Previous"
+        />
+      </div>
+
+      <div>
+        <img
+          src="../img/gallery/coffee-and-working.jpg"
+          onclick="nextImage()"
+          name="myImage"
+        /><br />
+      </div>
+
+      <div class="arrow-right">
+        <img src="../img/chevron-right.png" onclick="change(1)" value="Next" />
+      </div>
+    </div>
+
+    <button class="button-gallery-close">
+      <a
+        href="../html/gallery.html"
+        onclick="window.close();"
+        style="color: white; border-color: white"
+        >CLOSE</a
+      >
+    </button>
+  </body>
+  <!-- <script src="../js/gallery.js"></script> -->
+
+  <script src="../js/gallery.js"></script>
+</html>

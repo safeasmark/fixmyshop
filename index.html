@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/gallery.css" />
+    <link rel="stylesheet" href="./css/cart.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anta&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Fix My Shop</title>
+  </head>
+  <body>
+    <div>
+      <button class="button-gallery">
+        <a
+          href="./html/gallery.html"
+          onclick="window.open(this.href,'targetWindow', 'width=1000px, height=800px');
+          return false;"
+          >Gallery</a
+        >
+      </button>
+    </div>
+    <span class="cartIndex">
+      <a href="./html/cart.html">
+        <i
+          class="fa-solid fa-cart-shopping fa-fade"
+          style="--fa-animation-duration: 5s; --fa-fade-opacity: 0.6"
+          alt="Shopping cart"
+        ></i>
+      </a>
+    </span>
+    <header></header>
+    <a href="/index.html" alt="Home">
+      <img class="logo" src="./img/LogoNEW.png" alt="Logo" />
+    </a>
+
+    <nav>
+      <section class="card">
+        <a href="./index.html" class="active">
+          <div class="animated_card2">
+            <span class="fa fa-address-card-o"></span>
+            <h3>Home</h3>
+          </div>
+        </a>
+
+        <a href="./html/service.html">
+          <div class="animated_card2">
+            <span class="fa fa-code"></span>
+            <h3>What we do</h3>
+          </div>
+        </a>
+
+        <a href="./html/about.html">
+          <div class="animated_card2">
+            <span class="fa fa-users"></span>
+            <h3>About Us</h3>
+          </div>
+        </a>
+        <a href="./html/contact.html">
+          <div class="animated_card2">
+            <span class="fa-regular fa-paper-plane"></span>
+            <h3>Contact Us</h3>
+          </div>
+        </a>
+      </section>
+    </nav>
+
+    <hr class="line" />
+
+    <section>
+      <div class="title">
+        <h1>
+          Service for Web-development and
+          <img class="shop-logo" src="./img/shopify-logoOK.png" alt="Shopify" />
+          store setup
+        </h1>
+        <!-- <div class="pageOne">home</div> -->
+      </div>
+    </section>
+
+    <hr class="line" />
+
+    <section class="heroBg">
+      <div class="hero">
+        <div>
+          <img
+            src="img/website.svg"
+            alt="Illustration of computer displaying website"
+            class="website"
+          />
+        </div>
+        <div class="start">
+          <!-- <h2>Web development</h2> -->
+
+          <div class="listing">
+            <p>
+              Building your webpage, updating your Shopify store, customizing
+              your Shopify store, setting up your Shopify store, help with
+              Shopify, help with anything else...
+            </p>
+            <p>...we do it all!</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <hr class="line" />
+    <footer>
+      <div class="footer-container">
+        <!-- First column: Left-aligned text navigation -->
+        <div class="footer-column">
+          <ul class="nav-list">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./html/service.html">What we do</a></li>
+            <li><a href="./html/about.html">About us</a></li>
+            <li><a href="./html/contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Second column: Example content -->
+        <div class="footer-column">
+          <!-- <p>© 2024 Your Company</p>
+      <p>Privacy Policy | Terms of Service</p> -->
+        </div>
+
+        <!-- Third column: Example content (could be social media links, etc.) -->
+        <div class="footer-column">
+          <p style="color: slategrey">Follow us</p>
+          <!-- <ul class="social-list"> -->
+          <!-- <li> -->
+          <a href="https://facebook.com" target="_blank"
+            ><i class="fa-brands fa-square-facebook fa-2xl"></i
+          ></a>
+          <!-- </li> -->
+          <!-- <li> -->
+          <a href="https://bsky.app/" target="_blank"
+            ><i class="fa-brands fa-bluesky fa-2xl"></i
+          ></a>
+          <!-- </li> -->
+          <!-- <li> -->
+          <a href="https://instagram.com" target="_blank"
+            ><i class="fa-brands fa-square-instagram fa-2xl"></i
+          ></a>
+          <!-- </li> -->
+          <!-- </ul> -->
+        </div>
+      </div>
+    </footer>
+    <hr class="line" />
+    <p class="copyright">
+      &copy; <span id="current-year"></span> Fix My Shop. All rights reserved.
+      Privacy Policy | Terms of Service
+    </p>
+  </body>
+
+  <script
+    src="https://kit.fontawesome.com/6dbf9872e5.js"
+    crossorigin="anonymous"
+  ></script>
+
+  <script>
+    // JavaScript to highlight the active link
+    document.addEventListener("DOMContentLoaded", function () {
+      const links = document.querySelectorAll("nav a"); // Select all nav links
+      links.forEach((link) => {
+        if (link.href === window.location.href) {
+          link.classList.add("active"); // Add 'active' class to the current page link
+        }
+      });
+    });
+  </script>
+
+  <script>
+    // JavaScript to set the current year dynamically
+    document.getElementById("current-year").textContent =
+      new Date().getFullYear();
+  </script>
+
+  <script src="../js/script.js"></script>
+</html>

@@ -1,0 +1,827 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.anta-regular {
+  font-family: "Anta", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+header {
+  width: 100%;
+  background-color: #000;
+  text-align: center;
+}
+
+.button-gallery {
+  width: 100px;
+  height: 50px;
+  font-family: "Anta", sans-serif;
+  font-size: 1.3em;
+  background-color: rgb(146, 176, 206);
+  border-radius: 8px;
+  margin-top: 30px;
+  position: fixed;
+  transform: rotate(90deg);
+  transform-origin: 10px 40px;
+  left: 0;
+  z-index: 1000;
+}
+
+.button-gallery:hover {
+  background-color: red;
+}
+
+.button-gallery a:hover {
+  color: white;
+}
+
+body {
+  font-family: "Anta", sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: black;
+}
+
+nav {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background-color: black;
+}
+
+/* ========== Active link in NAV ========== */
+nav a.active h3 {
+  color: #ff6347;
+  font-size: 1em;
+  font-weight: bold;
+  border-radius: 5px;
+}
+/* ========== Active link in NAV - END ========== */
+
+/* ===== LOGO ===== */
+.logo {
+  width: 150px;
+  margin: 1.5rem 0 1.5rem 0;
+}
+
+/* ===== CART ===== */
+.cartIndex {
+  color: slategrey;
+  position: absolute;
+  top: 30px;
+  right: 30px;
+}
+
+/* ===== CUSTOM ALERT MODAL ===== */
+/* The Modal (background overlay) */
+.popup-modal {
+  display: none; /* Hidden by default */
+  position: fixed;
+  z-index: 1000; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Modal content (the popup window) */
+.popup-content {
+  background-color: #fff; /* Popup background color */
+  padding: 20px;
+  border-radius: 10px;
+  width: 300px;
+  max-width: 80%; /* Make it responsive */
+  margin: auto;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional shadow for effect */
+}
+
+/* Message inside the popup */
+.popup-content p {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Close button (hidden by default) */
+#popup-close {
+  display: none; /* Hide by default */
+  background-color: slategrey; /* Button background color */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#popup-close:hover {
+  background-color: slategrey;
+}
+
+/* Show the close button and modal when it has the 'show' class */
+.popup-modal.show {
+  display: flex; /* Use flexbox to center the modal */
+}
+
+.popup-modal.show #popup-close {
+  display: inline-block; /* Show the close button */
+}
+/* ===== CUSTOM ALERT MODAL/POPUP - END ===== */
+
+/* ===== CARDS ===== */
+
+.card {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  gap: 2vw;
+  padding: 30px 0 30px 0;
+}
+
+/* ===== .animated_card ===== */
+.animated_card2 {
+  display: grid;
+  place-items: center;
+  position: relative;
+  height: 100px;
+  width: 150px;
+  background: #222;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+/* ===== Fa icon settings ===== */
+span {
+  color: rgba(254, 254, 254, 0.3);
+  font-size: 2.2em;
+  z-index: 10;
+  margin-top: 8px;
+  margin-top: 6px;
+}
+
+/* ===== Border animation ===== */
+.animated_card2 {
+  overflow: hidden;
+  margin: 10px;
+}
+
+.animated_card2::before {
+  position: absolute;
+  content: "";
+  width: 50%;
+  height: 180%;
+  background: #ff6347;
+  transform: rotate(45deg);
+}
+
+/* ===== Card scaling effect ===== */
+.animated_card2 {
+  transition: all 0.3s ease-in-out;
+}
+
+.animated_card2:hover {
+  transform: scale(1.15);
+}
+/* ===== Card scaling effect END ===== */
+
+.animated_card2:hover::before {
+  animation: animate2 1s linear infinite;
+}
+
+@keyframes animate2 {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+    filter: hue-rotate(-360deg) saturate(1000%);
+  }
+}
+
+.animated_card2::after {
+  position: absolute;
+  content: "";
+  inset: 1px;
+  background: #111;
+  border-radius: 8px;
+}
+
+li {
+  color: none;
+}
+
+a:link {
+  text-decoration: none;
+  color: slategray;
+}
+
+a:visited {
+  color: slategray;
+  text-decoration: none;
+}
+
+a:hover {
+  color: red;
+  text-decoration: none;
+}
+
+a:active {
+  color: green;
+  text-decoration: none;
+}
+/* ===== CARDS END ===== */
+
+h1 {
+  font-family: "Anta";
+  font-size: 4rem;
+  text-transform: capitalize;
+}
+
+.start h2 {
+  font-family: "Anta";
+  font-size: 4rem;
+  font-weight: 400;
+  color: #ccc;
+
+  /* ===== Font effect - WEB DEVELOPMENT ===== */
+  position: relative;
+  top: 30px;
+  left: 230px;
+  transform: translate(-50%, -50%);
+  font-size: 50px;
+  letter-spacing: 0.1em;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: white;
+  text-shadow: 4px 4px #ccc, 9px 9px #000000;
+}
+
+h3 {
+  font-family: "Anta";
+  color: slategray;
+  text-transform: capitalize;
+  z-index: 11;
+  margin-bottom: 8px;
+}
+
+p {
+  font-family: sans-serif;
+  font-weight: 100;
+  color: #ccc;
+  text-align: left;
+}
+
+li {
+  color: #ccc;
+}
+
+.title {
+  text-align: center;
+  color: #ccc;
+  margin: 2rem 2rem;
+  max-width: 60rem;
+  height: auto;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.shop-logo {
+  width: 270px;
+  margin-bottom: -14px;
+}
+
+.pageOne {
+  font-family: "Anta";
+  color: #333;
+  opacity: 0.6;
+  font-size: 10rem;
+  position: fixed;
+  top: 4.5rem;
+  left: 1.5rem;
+  z-index: -1;
+  max-height: 1rem;
+}
+
+.heroBg {
+  width: 98%;
+  height: 450px;
+  background-image: url(../img/HeroBgOne.jpeg);
+  background-position: center;
+  margin: 20px;
+}
+
+hr.line {
+  border: 1px solid #ff6347;
+  width: 100%;
+}
+
+.hero {
+  margin: 2rem 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-opacity {
+  opacity: 0.3;
+}
+
+.website {
+  margin: 2rem 1rem;
+  width: 20rem;
+  display: none;
+}
+
+.start {
+  margin: 2rem;
+  text-align: center;
+  max-width: 30rem;
+}
+
+.list {
+  max-width: 90%;
+  margin-top: 30px;
+  /* list-style: circle; */
+  font-family: "Anta";
+  font-size: 1.2rem;
+  line-height: 2rem;
+  text-align: left;
+  color: #ccc;
+}
+
+.listing {
+  background-color: white;
+  margin-top: 85px;
+  padding: 20px 0 20px 0;
+  border-radius: 10px;
+  transform: rotate(10deg);
+}
+
+/* .listing p {
+  transform: rotate(-20deg); 
+} */
+
+.listing p {
+  /* font-family: "Anta"; */
+  color: #333;
+  font-size: 1rem;
+  line-height: 1.4rem;
+  margin-left: 30px;
+  font-weight: 500;
+}
+
+.listing p:last-child {
+  font-family: "Anta";
+  font-size: 1.5rem;
+  margin-top: 20px;
+}
+
+/* ===== MEDIA Screen ===== */
+
+@media screen and (min-width: 568px) {
+  .list {
+    margin: auto;
+  }
+}
+
+@media screen and (max-width: 567px) {
+  .start {
+    margin: 2rem;
+  }
+
+  h1 {
+    margin-left: 2rem;
+    margin-right: 2rem;
+    font-size: 3.5rem;
+  }
+
+  * {
+    overflow-x: hidden;
+  }
+  span {
+    overflow-y: hidden;
+  }
+
+  /* li {
+    color: #ccc;
+  } */
+
+  .title {
+    margin: 4rem 1rem;
+    max-width: 25rem;
+    height: auto;
+  }
+
+  .pageOne {
+    writing-mode: vertical-lr;
+    /* transform: rotate(180deg);
+    text-align: left; */
+    font-family: "Anta";
+    color: #333;
+    /* opacity: 0.6; */
+    font-size: 6rem;
+    position: fixed;
+    top: 10rem;
+    right: -1.3rem;
+    z-index: -1;
+    max-height: 26rem;
+  }
+
+  .list {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    text-align: center;
+    /* list-style: circle; */
+    font-family: "Anta";
+    font-size: 1rem;
+    line-height: 2rem;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .start {
+    margin: 0rem;
+  }
+
+  .animated_card2 {
+    margin: 3px;
+  }
+
+  .website {
+    margin-top: 0;
+  }
+
+  .title {
+    margin: 30px 0px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  .list {
+    margin: 1rem 1rem 1rem 3rem;
+  }
+}
+
+/* ===== ABOUT US ===== */
+.about {
+  max-width: 800px;
+}
+
+.about h1 {
+  color: white;
+  text-align: center;
+  margin-top: 30px;
+  padding: 20px;
+}
+
+.aboutus {
+  font-family: "Anta", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 2em;
+  color: slategrey;
+  text-align: center;
+}
+
+.about p {
+  font-family: "Anta", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.3em;
+  line-height: 1.6;
+  margin-top: 20px;
+  padding: 20px;
+}
+
+.about h3 {
+  margin-top: 40px;
+  margin-left: 20px;
+  font-size: 1.6em;
+}
+
+/* ===== Services ===== */
+
+.heroServices {
+  width: 98%;
+  margin: 15px 0 15px 0;
+}
+
+.services h1 {
+  text-align: center;
+  margin-top: 30px;
+  padding: 20px;
+}
+
+.services p {
+  font-family: "Anta", sans-serif;
+  font-size: 1.2em;
+  line-height: 1.6;
+  padding: 20px;
+  margin-bottom: 30px;
+}
+
+.services {
+  max-width: 800px;
+  color: white;
+  margin-bottom: 30px;
+}
+
+.services img {
+  float: right;
+  padding: 0 8px 0 8px;
+}
+
+.service-intro {
+  overflow: auto; /* === Clearfix to move content below image === */
+}
+
+.service-intro p {
+  position: static;
+  margin-top: 10%;
+}
+
+.service {
+  background: #111;
+  margin: 10px 0;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.service h2 {
+  color: rgb(146, 176, 206);
+  margin-top: 0;
+}
+
+.service ul {
+  list-style: none;
+  padding: 0;
+}
+
+.service li {
+  font-size: 1.1em;
+}
+
+.service ul li {
+  margin: 10px 0;
+}
+
+.service ul li strong {
+  color: slategrey;
+}
+
+.cta {
+  background: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 5px;
+  margin-bottom: 50px;
+  padding: 50px;
+  margin: 40px 0 50px 0;
+}
+
+.cta h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.cta ul {
+  list-style: none;
+  padding: 0;
+}
+
+.cta li {
+  font-size: 1.1em;
+  text-align: left;
+}
+
+.cta ul li {
+  margin: 10px 0;
+}
+
+.cta ul li strong {
+  color: rgb(146, 176, 206);
+}
+
+.cta a {
+  font-size: 1.6em;
+  color: rgb(146, 176, 206);
+  text-decoration: none;
+}
+
+/* ===== CONTACT PAGE ===== */
+
+.contact {
+  max-width: 800px;
+  margin-bottom: 50px;
+}
+
+.contact h1 {
+  color: white;
+  text-align: center;
+  margin-top: 30px;
+  padding: 20px;
+}
+
+.contact p {
+  font-family: "Anta", sans-serif;
+  font-size: 1.2em;
+  line-height: 1.6;
+}
+
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form {
+  padding: 30px;
+}
+
+label {
+  font-family: "Anta", sans-serif;
+  font-size: 1.3em;
+  color: white;
+}
+
+input {
+  height: 40px;
+  width: 500px;
+  margin-bottom: 20px;
+}
+
+.button input {
+  margin-left: 25%;
+}
+
+.button input[type="submit"] {
+  font-family: "Anta", sans-serif;
+  font-size: 1.3em;
+  font-weight: 800;
+  background-color: rgb(146, 176, 206);
+  color: white;
+  height: 50px;
+  width: 250px;
+}
+
+/* ===== CONTACT PAGE END ===== */
+
+/* ===== FOOTER ===== */
+
+footer {
+  background-color: #222;
+  color: slategrey;
+  width: 100%;
+  padding: 20px 0;
+  /* margin-top: 50px; */
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.footer-column {
+  flex: 1;
+  padding: 0 20px;
+}
+
+.footer-column p {
+  font-family: "Anta", sans-serif;
+  padding-bottom: 10px;
+}
+
+.nav-list,
+.social-list {
+  list-style-type: none;
+}
+
+.nav-list li,
+.social-list li {
+  /* margin: 8px 0; */
+  font-family: "Anta", sans-serif;
+  font-size: 1.3em;
+}
+
+.nav-list a {
+  text-decoration: none;
+  color: slategrey;
+  font-size: 0.9em;
+  transition: color 0.3s ease;
+}
+
+.nav-list a:hover,
+.social-list a:hover {
+  color: #ff6347; /* Change to a hover color of your choice */
+}
+
+.fa-2xl {
+  margin-right: 10px;
+}
+
+.footer-column p {
+  font-size: 1.3em;
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+/* ===== Responsive design ===== */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-column {
+    padding: 10px 0;
+    text-align: center;
+  }
+
+  .services img {
+    float: none;
+    padding: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .copyright {
+    padding: 0 10px 0 10px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 567px) {
+  * {
+    overflow-x: visible;
+  }
+
+  nav {
+    position: relative;
+  }
+
+  .hero {
+    padding: 0;
+    margin: 0;
+  }
+
+  .footer-container {
+    padding-bottom: 20px;
+  }
+
+  .footer-column {
+    padding: 0;
+    margin: 10px;
+  }
+
+  .footer-column p {
+    padding: 0;
+    margin: 20px;
+  }
+
+  .cta {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .contact {
+    max-width: 300px;
+  }
+}
+
+/* ===== FOOTER - END ===== */
+
+/* ===== COPYRIGHT INFO ===== */
+.copyright {
+  font-size: 0.8em;
+  margin-top: 10px;
+  margin-bottom: 50px;
+  color: slategrey;
+}
+
+span#current-year {
+  font-size: 1em;
+  color: slategrey;
+}
+
+/* ===== COPYRIGHT INFO - END ===== */
