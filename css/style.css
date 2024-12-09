@@ -68,6 +68,8 @@ nav a.active h3 {
 .logo {
   width: 200px;
   content: url(../img/logoNEW.png);
+  margin-top: 40px;
+  margin-bottom: 40px;
   display: block;
   margin-left: auto;
   margin-right: auto;
