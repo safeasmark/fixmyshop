@@ -67,7 +67,6 @@ nav a.active h3 {
 /* ===== LOGO ===== */
 .logo {
   width: 150px;
-  margin: 1.5rem 0 1.5rem 0;
   content: url(../img/logoNEW.png);
   display: block;
   margin-left: auto;
