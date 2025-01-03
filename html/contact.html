@@ -73,35 +73,117 @@
           team is here to help. Fill out the form below, and we'll get back to
           you as soon as possible. Let's create something amazing together!
         </p>
-        <div class="form-container">
-          <form>
-            <label for="firstname">First name:</label><br />
-            <input
-              type="text"
-              id="firstname"
-              name="firstname"
-              placeholder="You First Name"
-            />
-            <br />
-            <label for="lastname">Last name:</label><br />
-            <input
-              type="text"
-              id="lastname"
-              name="lastname"
-              placeholder="Your Last Name"
-            />
-            <br />
-            <label for="message">Your message to us:</label><br />
-            <textarea id="message" name="message" rows="8" cols="61"></textarea>
-            <br /><br />
-            <div class="button">
-              <input type="submit" value="Submit" />
+
+        <form>
+          <fieldset>
+            <legend>Get In Touch</legend>
+            <div>
+              <label for="name">Full Name</label><br />
+              <input
+                class="input"
+                type="text"
+                name="name"
+                id="name"
+                placeholder="Your Name"
+                required
+              />
+              <br /><br />
             </div>
-          </form>
-        </div>
+            <div>
+              <label for="email">Email Address</label><br />
+              <input
+                class="input"
+                type="email"
+                name="email"
+                id="email"
+                placeholder="you@company.com"
+                required
+              /><br /><br />
+            </div>
+            <div>
+              <label for="phone">Phone Number</label>
+              <br />
+              <input
+                class="input"
+                type="text"
+                name="phone"
+                id="phone"
+                placeholder="+352 123 456 789"
+                required
+              /><br /><br />
+            </div>
+            <div>
+              <label for="cars">What service are you interested in:</label
+              ><br />
+              <select class="dropdown" id="service" name="service">
+                <option value="choose">Please choose...</option>
+                <option value="Web">Web Development</option>
+                <option value="concept">Website Concept</option>
+                <option value="coding">Coding Project</option>
+                <option value="support">Support</option></select
+              ><br />
+            </div>
+
+            <div>
+              <p for="radio">How did you hear about us?</p>
+
+              <input
+                class="radio"
+                type="radio"
+                id="google"
+                name="heard"
+                value="Google"
+              />
+              <label for="google">Google</label><br />
+
+              <input
+                class="radio"
+                type="radio"
+                id="bing"
+                name="heard"
+                value="bing"
+              />
+              <label for="bing">Bing</label><br />
+
+              <input
+                class="radio"
+                type="radio"
+                id="javascript"
+                name="heard"
+                value="safari"
+              />
+              <label for="safari">Safari</label><br />
+
+              <input
+                class="radio"
+                type="radio"
+                id="other"
+                name="heard"
+                value="other"
+              />
+              <label for="other">Other</label><br /><br />
+            </div>
+
+            <div>
+              <label for="message">Your Message</label>
+              <br />
+              <textarea
+                rows="5"
+                name="message"
+                id="message"
+                placeholder="Your Message"
+                required
+              ></textarea
+              ><br /><br />
+            </div>
+
+            <button class="message" type="submit">Send Message</button>
+          </fieldset>
+        </form>
       </section>
     </main>
     <hr class="line" />
+
     <footer>
       <div class="footer-container">
         <!-- First column: Left-aligned text navigation -->

@@ -73,7 +73,6 @@ nav a.active h3 {
   display: block;
   margin-left: auto;
   margin-right: auto;
-
 }
 
 /* ===== CART ===== */
@@ -492,8 +491,32 @@ hr.line {
 .about h1 {
   color: white;
   text-align: center;
-  margin-top: 30px;
+  margin: 30px 0 50px 0;
+  padding: 30px;
+}
+
+.about p {
+  background-color: #111;
+  margin: 10px 0;
   padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* === To remove background of intro paragraph === */
+.about p:nth-child(2) {
+  background: none;
+}
+/* === To remove background of intro paragraph - END === */
+
+.about-intro img {
+  float: right;
+  padding: 0 8px 0 8px;
+  margin: 40px 0 30px 0;
+}
+
+.about-intro {
+  overflow: auto; /* === Clearfix to move content below image === */
 }
 
 .aboutus {
@@ -512,14 +535,31 @@ hr.line {
   font-size: 1.3em;
   line-height: 1.6;
   margin-top: 20px;
-  padding: 20px;
+  margin: 0 20px 0 20px;
+}
+
+.about-intro p {
+  position: static;
+  padding-top: 10%;
 }
 
 .about h3 {
-  margin-top: 40px;
-  margin-left: 20px;
   font-size: 1.6em;
+  margin: 30px 20px 10px 20px;
+  padding: 0 0 0 20px;
 }
+
+@media screen and (max-width: 567px) {
+  .about h1 {
+    margin: 50px 0 0px 0;
+  }
+
+  .about img {
+    margin: 50px 0 30px 0;
+  }
+}
+
+/* ===== About Us - END ===== */
 
 /* ===== Services ===== */
 
@@ -530,8 +570,8 @@ hr.line {
 
 .services h1 {
   text-align: center;
-  margin-top: 30px;
-  padding: 20px;
+  margin: 30px 0 50px 0;
+  padding: 30px;
 }
 
 .services p {
@@ -593,18 +633,23 @@ hr.line {
 }
 
 .cta {
-  background: #333;
   color: #fff;
   text-align: center;
   border-radius: 5px;
-  margin-bottom: 50px;
-  padding: 50px;
-  margin: 40px 0 50px 0;
+  margin-bottom: 40px;
 }
 
 .cta h2 {
   margin-top: 0;
   margin-bottom: 20px;
+}
+
+.cta p {
+  background: none;
+  color: rgb(250, 123, 50);
+  font-size: 1.7rem;
+  text-align: center;
+  padding: 30px 20px 30px 20px;
 }
 
 .cta ul {
@@ -626,9 +671,25 @@ hr.line {
 }
 
 .cta a {
-  font-size: 1.6em;
-  color: rgb(146, 176, 206);
+  font-family: "Anta", sans-serif;
+  font-size: 1.8rem;
+  color: #f1f1f1;
   text-decoration: none;
+  padding: 20px;
+}
+
+.cta button {
+  background: slategrey;
+  height: 70px;
+  border-radius: 15px;
+  margin: 20px 0 50px 0;
+}
+
+.cta button:hover {
+  display: inline-block;
+  background: rgb(250, 123, 50);
+  transform: translate(2px, 3px);
+  transition: all ease-in-out 0.3s;
 }
 
 /* ===== CONTACT PAGE ===== */
@@ -639,7 +700,7 @@ hr.line {
 }
 
 .contact h1 {
-  color: white;
+  color: #f1f1f1;
   text-align: center;
   margin-top: 30px;
   padding: 20px;
@@ -647,44 +708,83 @@ hr.line {
 
 .contact p {
   font-family: "Anta", sans-serif;
-  font-size: 1.2em;
+  font-size: 1.4em;
+  color: #f1f1f1;
   line-height: 1.6;
-}
-
-.form-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  margin: 30px 0 10px 0;
 }
 
 form {
+  max-width: 600px;
+  margin: 50px auto;
+  font-family: "Anta", sans-serif;
+  background: #222;
+  color: #f1f1f1;
+  border-radius: 10px;
+  padding: 10px 15px 15px 15px;
+}
+
+fieldset {
   padding: 30px;
+  border-radius: 10px;
 }
 
 label {
   font-family: "Anta", sans-serif;
   font-size: 1.3em;
   color: white;
+  margin: 0 0px 10px 5px;
 }
 
 input {
   height: 40px;
-  width: 500px;
+  /* width: 500px; */
   margin-bottom: 20px;
+  margin-top: 10px;
+  border-radius: 6px;
+  padding-left: 10px;
 }
 
-.button input {
-  margin-left: 25%;
+.input {
+  width: 96%;
 }
 
-.button input[type="submit"] {
+.radio {
+  height: 15px;
+}
+
+.radio-label {
+  color: #f1f1f1;
+}
+
+.dropdown {
+  margin-top: 15px;
   font-family: "Anta", sans-serif;
-  font-size: 1.3em;
-  font-weight: 800;
-  background-color: rgb(146, 176, 206);
-  color: white;
-  height: 50px;
-  width: 250px;
+  font-size: 1.2rem;
+}
+
+textarea {
+  width: 95%;
+  border-radius: 6px;
+  margin-top: 10px;
+  padding: 13px 0 0 10px;
+}
+
+.message {
+  font-family: "Anta", sans-serif;
+  font-size: 1.2rem;
+  height: 40px;
+  padding: 0 20px 0 20px;
+}
+
+@media screen and (max-width: 567px) {
+  form {
+    padding: 0;
+  }
+
+  fieldset {
+    padding: 20px;
+  }
 }
 
 /* ===== CONTACT PAGE END ===== */
@@ -803,11 +903,6 @@ footer {
   .footer-column p {
     padding: 0;
     margin: 20px;
-  }
-
-  .cta {
-    padding-left: 20px;
-    padding-right: 20px;
   }
 
   .contact {

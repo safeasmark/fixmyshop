@@ -86,3 +86,41 @@ h2 {
 .button-gallery-close {
   transition: all 0.3s ease-in-out;
 }
+
+@media screen and (max-width: 980px) {
+  .gallery {
+    height: 350px;
+  }
+
+  .gallery-image {
+    position: absolute;
+    z-index: 10;
+  }
+
+  .gallery img {
+    height: 200px;
+    margin-top: -50px;
+  }
+
+  .arrows img {
+    display: block;
+    margin: auto;
+    top: 400px;
+  }
+
+  .arrow-left img {
+    position: relative;
+    height: 50px;
+    top: 135px;
+    left: 0px;
+    background-color: rgba(255, 255, 255, 0.4);
+  }
+
+  .arrow-right img {
+    position: relative;
+    height: 50px;
+    top: 135px;
+    right: 0px;
+    background-color: rgba(255, 255, 255, 0.4);
+  }
+}
